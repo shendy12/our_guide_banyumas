@@ -1,7 +1,7 @@
 // Array untuk menyimpan data destinasi
 const destinasi ={
   "alam" : [
-      { imageUrl: "https://raw.githubusercontent.com/shendy12/our_guide_banyumas/main/assets/images/alam/limpakuwus.jpg
+      { imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNoO_1prFxo5Xn4OdjNMvReMgBZrw_gwzFdjND7=s1360-w1360-h1020
 ", content: "Limpakuwus", info:'limpakuwus',lokasi:'Baturaden' ,tempat:'alam'},
       { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub.webp" ,  content:"Menara Pandang Caub Baturraden", info:'caub',lokasi:'Baturaden' ,tempat:'alam' },
       { imageUrl: "http://localhost/uts/assets/images/alam/melung/melung1.jpg" ,  content:"Melung Bauraden",info:'melung', lokasi:'Baturaden',tempat:'alam' }
