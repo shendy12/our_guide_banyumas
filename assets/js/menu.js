@@ -1,16 +1,16 @@
 // Array untuk menyimpan data destinasi
 const destinasi ={
   "alam" : [
-      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus.jpg", content: "Limpakuwus", info:'limpakuwus' ,tempat:'alam'},
-      { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub.webp" ,  content:"Menara Pandang Caub Baturraden", info:'caub',tempat:'alam' },
-      { imageUrl: "http://localhost/uts/assets/images/alam/melung/melung1.jpg" ,  content:"Melung Bauraden",info:'melung',tempat:'alam' }
+      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus.jpg", content: "Limpakuwus", info:'limpakuwus',lokasi:'Baturaden' ,tempat:'alam'},
+      { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub.webp" ,  content:"Menara Pandang Caub Baturraden", info:'caub',lokasi:'Baturaden' ,tempat:'alam' },
+      { imageUrl: "http://localhost/uts/assets/images/alam/melung/melung1.jpg" ,  content:"Melung Bauraden",info:'melung', lokasi:'Baturaden',tempat:'alam' }
   ],
   "taman" : [
-    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani2.jpg" ,  content:"Taman Botani Baturaden", info:'botani',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/andang/an1.jpg" ,  content:"Taman Andang Pangrenan Purwokerto", info:'andang',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/kebunraya/kbr1.jpg" ,  content:"Kebunraya", info:'kebunraya',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/maskemambang/ms1.jpg" ,  content:"Maaskemambang", info:'maskemambang',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/nsw/nsw1.jpg" ,  content:"New Small Word", info:'nsw',tempat:'taman' },
+    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani2.jpg" ,  content:"Taman Botani Baturaden", info:'botani',lokasi:'Baturaden',tempat:'taman' },
+    { imageUrl: "http://localhost/uts/assets/images/taman/andang/an1.jpg" ,  content:"Taman Andang Pangrenan Purwokerto", info:'andang',lokasi:'Purwokero',tempat:'taman' },
+    { imageUrl: "http://localhost/uts/assets/images/taman/kebunraya/kbr1.jpg" ,  content:"Kebunraya", info:'kebunraya',lokasi:'Baturaden',tempat:'taman' },
+    { imageUrl: "http://localhost/uts/assets/images/taman/maskemambang/ms1.jpg" ,  content:"Maaskemambang", info:'maskemambang',lokasi:'Purwokerto',tempat:'taman' },
+    { imageUrl: "http://localhost/uts/assets/images/taman/nsw/nsw1.jpg" ,  content:"New Small Word", info:'nsw' ,lokasi:'Purwokero',tempat:'taman' },
 
     
   ],
@@ -19,26 +19,36 @@ const destinasi ={
 
 // Fungsi untuk menampilkan destinasi berdasarkan kategori
 function tampilkan(category) {
-  var isi = document.getElementById('swep1');
-  var subKonten = document.getElementById('swep2');
-  subKonten.innerHTML = ''
-  // Mengambil elemen swiper-wrapper dengan ID swep1
-  isi.innerHTML = ''; // Mengosongkan isi swiper-wrapper sebelum menambahkan data baru
+  var isi = document.getElementById('isikonten');
+  var subs = document.getElementById('subkonten');
+  subs.innerHTML='';
+  isi.innerHTML = '';
+   // Mengosongkan isi kontainer sebelum menambahkan data baru
   destinasi[category].forEach(element => { // Akses array destinasi[category]
       var kolom = document.createElement('div');
-      kolom.className = 'card swiper-slide'; // Memastikan kolom memiliki kelas swiper-slide
+      kolom.className = 'swiper-slide '; // Menambahkan kelas kolom
       kolom.innerHTML = `
-          <img src="${element.imageUrl}" class="card-img-top" alt="destinasi" onclick="tampilkanSub('${element.info}')"> 
-          <div class="card-body">
-              <p class="card-text">${element.content}</p>
-              <a href="./assets/${element.tempat}/${element.info}.html">
-              <button type="button" class="btn btn-primary btn-lg">informasi</button>
-              </a>
-          </div> 
-      `;
-      isi.appendChild(kolom); // Tambahkan kolom ke dalam isi swiper-wrapper
+      <div class="swiper-slide">
+        <!-- Gambar -->
+        <img src="${element.imageUrl}" alt="${element.content}" />
+        <!-- Teks -->
+        <div class="text-overlay">
+          <div class="title">${element.content}</div>
+          <div class="subtitle">${element.lokasi}</div>
+          <div class="text">
+            <p>
+              
+            </p>
+          </div>
+          <a href="./assets/${element.tempat}/${element.info}.html" class="btn btn-secondary btn-sm">Informasi</a>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="tampilkanSub('${element.info}')">Lihat Lebih Banyak</button>
+        </div>
+      </div>
+    `;
+    
+    isi.appendChild(kolom); // Tambahkan kolom ke dalam kontainer
+    
   });
-   subContentShown = false;
 }
 // Objek untuk menyimpan data sub-kategori
 const sub_img = {
@@ -76,19 +86,22 @@ const sub_img = {
   ]
 }
 // Fungsi untuk menampilkan sub-konten berdasarkan destinasi yang dipilih
+// Fungsi untuk menampilkan sub-konten berdasarkan destinasi yang dipilih
 function tampilkanSub(category) {
-  var subKonten = document.getElementById('swep2');
+  var subKonten = document.getElementById('subkonten');
   subKonten.innerHTML = ''; // Mengosongkan isi HTML sebelum menambahkan data baru
   sub_img[category].forEach(element => { // Akses array sub_img[category]
-      var card = document.createElement('div'); // Buat elemen div untuk setiap kartu
-      card.className = 'card swiper-slide'; 
-      card.innerHTML = `
-      <img src="${element.imageUrl}" class="card-img-top" alt="destinasi">
-          <div class="card-body">
-              <p class="card-text">${element.content}</p>
-          </div> 
-      `;
-      subKonten.appendChild(card); // Tambahkan kartu ke dalam isi sub-konten
+      var subb = document.createElement('div'); // Buat elemen div untuk setiap kartu
+      subb.className = 'swiper-slide'; 
+      subb.innerHTML = `
+      <div class="card text-bg-dark" onclick="tampilkanDetail('${element.detail}')">
+        <div class="card-img-overlay">
+          <h5 class="card-title">${element.content}</h5>
+        </div> 
+      </div>
+      <img src="${element.imageUrl}" class="card-img" alt="${element.content}">
+    `;
+    subKonten.appendChild(subb); // Tambahkan kartu ke dalam isi sub-konten
   });
 }
 

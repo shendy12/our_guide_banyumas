@@ -11,7 +11,7 @@
   font-size: 23px;
 }
 body{
-  background: #979c9f;
+  background-color: #77797b !important;
 }
 
 /*global*/
@@ -54,7 +54,7 @@ section{
 #hero .warna{
  border:2px solid #dfeae18f !important;
 }
-a.warna:hover{
+#hero a.warna:hover{
 background-color: #83C50C !important;
 border: #dee4e7;
 }
@@ -82,79 +82,60 @@ color: #83C50C !important;
 
 
 
-/*card*/
-.card {
-  border-radius: 15px; /* Mengatur sudut card menjadi melengkung */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada card */
-  transition: transform 0.3s ease; /* Efek transisi ketika card dihover */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+.subtitle {
+  font-size: 24px;
+}
+.text {
+  font-size: 16px;
+  max-width: 600px;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
 
-
-.card img {
-  border-top-left-radius: 15px; /* Melengkungkan sudut kiri atas gambar */
-  border-top-right-radius: 15px; /* Melengkungkan sudut kanan atas gambar */
-  height: 200px; /* Menetapkan tinggi gambar */
-  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+.btn {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
-.card .card-body {
-  padding: 15px; /* Memberikan padding pada body card */
+.btn:hover {
+  background-color: #83C50C !important;
 }
-
-.card .card-text {
-  color: #333; /* Warna teks */
-}
-
-.card .btn {
-  background-color: #007bff; /* Warna latar belakang tombol */
-  border: none; /* Menghapus border tombol */
-}
-
-.card .btn:hover {
-  background-color: #0056b3; /* Warna latar belakang tombol saat dihover */
-}
-
-
-/* styles.css */
-
-/* Tambahkan ini di akhir file CSS */
-
-/* Slide */
-#subkonten {
-  margin-top: 50px; /* Atur jarak antara slide utama dan slide konten */
-}
-
-/* Kartu */
-#subkonten .card {
-  border: none; /* Hapus border kartu */
-  background-color: #f8f9fa; /* Warna latar belakang kartu */
-  transition: transform 0.3s ease; /* Efek transisi ketika kartu dihover */
-}
-
-#subkonten .card:hover {
-  transform: translateY(-5px); /* Mendorong kartu sedikit ke atas saat dihover */
-}
-
-#subkonten .card img {
-  border-radius: 15px 15px 0 0; /* Melengkungkan sudut atas gambar */
-}
-
-#subkonten .card .card-body {
-  padding: 15px; /* Memberikan padding pada body kartu */
-}
-
-#subkonten .card .card-text {
-  color: #333; /* Warna teks */
-}
-
-#subkonten .card .btn {
-  background-color: #007bff; /* Warna latar belakang tombol */
-  border: none; /* Menghapus border tombol */
-}
-
-#subkonten .card .btn:hover {
-  background-color: #0056b3; /* Warna latar belakang tombol saat dihover */
-}
-
-
