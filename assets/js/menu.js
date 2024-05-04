@@ -1,10 +1,12 @@
 // Array untuk menyimpan data destinasi
 const destinasi ={
   "alam" : [
-      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus.jpg", content: "Limpakuwus", info:'limpakuwus',lokasi:'Baturaden' ,tempat:'alam'},
+      { imageUrl: "https://raw.githubusercontent.com/shendy12/our_guide_banyumas/main/assets/images/alam/limpakuwus.jpg
+", content: "Limpakuwus", info:'limpakuwus',lokasi:'Baturaden' ,tempat:'alam'},
       { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub.webp" ,  content:"Menara Pandang Caub Baturraden", info:'caub',lokasi:'Baturaden' ,tempat:'alam' },
       { imageUrl: "http://localhost/uts/assets/images/alam/melung/melung1.jpg" ,  content:"Melung Bauraden",info:'melung', lokasi:'Baturaden',tempat:'alam' }
-  ],
+        
+],
   "taman" : [
     { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani2.jpg" ,  content:"Taman Botani Baturaden", info:'botani',lokasi:'Baturaden',tempat:'taman' },
     { imageUrl: "http://localhost/uts/assets/images/taman/andang/an1.jpg" ,  content:"Taman Andang Pangrenan Purwokerto", info:'andang',lokasi:'Purwokero',tempat:'taman' },
