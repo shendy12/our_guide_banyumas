@@ -1,18 +1,16 @@
 // Array untuk menyimpan data destinasi
 const destinasi ={
   "alam" : [
-      { imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNoO_1prFxo5Xn4OdjNMvReMgBZrw_gwzFdjND7=s1360-w1360-h1020
-", content: "Limpakuwus", info:'limpakuwus',lokasi:'Baturaden' ,tempat:'alam'},
-      { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub.webp" ,  content:"Menara Pandang Caub Baturraden", info:'caub',lokasi:'Baturaden' ,tempat:'alam' },
-      { imageUrl: "http://localhost/uts/assets/images/alam/melung/melung1.jpg" ,  content:"Melung Bauraden",info:'melung', lokasi:'Baturaden',tempat:'alam' }
-        
-],
+      { tempat:'alam', info:'limpakuwus',imageUrl: "limpakuwus.jpg", content: "Limpakuwus", info:'limpakuwus',lokasi:'Baturaden'},
+      { tempat:'alam', info:'caub',imageUrl: "caub.webp" ,  content:"Menara Pandang Caub",lokasi:'Baturaden' },
+      { tempat:'alam', info:'melung',imageUrl: "melung1.jpg" ,  content:"Melung", lokasi:'Baturaden' }
+  ],
   "taman" : [
-    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani2.jpg" ,  content:"Taman Botani Baturaden", info:'botani',lokasi:'Baturaden',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/andang/an1.jpg" ,  content:"Taman Andang Pangrenan Purwokerto", info:'andang',lokasi:'Purwokero',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/kebunraya/kbr1.jpg" ,  content:"Kebunraya", info:'kebunraya',lokasi:'Baturaden',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/maskemambang/ms1.jpg" ,  content:"Maaskemambang", info:'maskemambang',lokasi:'Purwokerto',tempat:'taman' },
-    { imageUrl: "http://localhost/uts/assets/images/taman/nsw/nsw1.jpg" ,  content:"New Small Word", info:'nsw' ,lokasi:'Purwokero',tempat:'taman' },
+    { tempat:'taman', info:'botani',imageUrl: "botani2.jpg" ,  content:"Taman Botani",lokasi:'Baturaden'},
+    { tempat:'taman', info:'andang',imageUrl: "an1.jpg" ,  content:"Taman Andang Pangrenan",lokasi:'Purwokero'},
+    { tempat:'taman',info:'kebunraya',imageUrl: "kbr1.jpg" ,  content:"Kebunraya",lokasi:'Baturaden',tempat:'taman' },
+    { tempat:'taman',info:'maskemambang' ,imageUrl: "ms1.jpg" ,  content:"Maaskemambang",lokasi:'Purwokerto' },
+    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw1.jpg" ,  content:"New Small Word",lokasi:'Purwokero' },
 
     
   ],
@@ -31,19 +29,12 @@ function tampilkan(category) {
       kolom.className = 'swiper-slide '; // Menambahkan kelas kolom
       kolom.innerHTML = `
       <div class="swiper-slide">
-        <!-- Gambar -->
-        <img src="${element.imageUrl}" alt="${element.content}" />
-        <!-- Teks -->
-        <div class="text-overlay">
+      <img src="./assets/images/${element.tempat}/${element.info}/${element.imageUrl}" alt="${element.content}" />
+      <div class="text-overlay">
           <div class="title">${element.content}</div>
           <div class="subtitle">${element.lokasi}</div>
-          <div class="text">
-            <p>
-              
-            </p>
-          </div>
-          <a href="./assets/${element.tempat}/${element.info}.html" class="btn btn-secondary btn-sm">Informasi</a>
-          <button type="button" class="btn btn-secondary btn-sm" onclick="tampilkanSub('${element.info}')">Lihat Lebih Banyak</button>
+          <a href="./assets/${element.tempat}/${element.info}.html"><button type="button" class="btn btn-secondary btn-sm">Informasi Sengkap</button></a>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="tampilkanSub('${element.info}')">Lihat Lebih Banyak Gambar</button>
         </div>
       </div>
     `;
@@ -56,35 +47,35 @@ function tampilkan(category) {
 const sub_img = {
 //alam
   "limpakuwus": [
-      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus.jpg", content: "Limpakuwus" },
-      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus2.jpg" ,  content:"Limpakuwus"},
-      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus3.jpg" ,  content:"Limpakuwus"},
-      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus4.jpg" ,  content:"Limpakuwus"},
-      { imageUrl: "http://localhost/uts/assets/images/alam/limpakuwus/limpakuwus5.jpg" ,  content:"Limpakuwus"}
+      { tempat:'alam', info:'limpakuwus',imageUrl: "limpakuwus.jpg", content: "Limpakuwus" },
+      { tempat:'alam', info:'limpakuwus',imageUrl: "limpakuwus2.jpg" ,  content:"Limpakuwus"},
+      { tempat:'alam', info:'limpakuwus',imageUrl: "limpakuwus3.jpg" ,  content:"Limpakuwus"},
+      { tempat:'alam', info:'limpakuwus',imageUrl: "limpakuwus4.jpg" ,  content:"Limpakuwus"},
+      { tempat:'alam', info:'limpakuwus',imageUrl: "limpakuwus5.jpg" ,  content:"Limpakuwus"}
 
     ],
   "caub": [
-    { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub2.webp", content: "Caub Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub5.webp", content: "Caub Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub5.jpg", content: "Caub Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub4.jpg", content: "Caub Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub3.jpg", content: "Caub Baturaden" },
+    { tempat:'alam', info:'caub',imageUrl: "caub2.webp", content: "Caub Baturaden" },
+    { tempat:'alam', info:'caub',imageUrl: "caub5.webp", content: "Caub Baturaden" },
+    { tempat:'alam', info:'caub',imageUrl: "caub5.jpg", content: "Caub Baturaden" },
+    { tempat:'alam', info:'caub',imageUrl: "caub4.jpg", content: "Caub Baturaden" },
+    { tempat:'alam', info:'caub',imageUrl: "caub3.jpg", content: "Caub Baturaden" },
 
   ],
   "melung": [
-    { imageUrl: "http://localhost/uts/assets/images/alam/Melung/Melung.jpg", content: "Melung Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/Melung/melung1.jpg", content: "Melung Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/Melung/melung4.jpg", content: "Melung Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/Melung/melung5.jpg", content: "Melung Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/alam/Melung/melung2.webp", content: "Melung Baturaden" },
+    { tempat:'alam', info:'melung',imageUrl: "Melung.jpg", content: "Melung Baturaden" },
+    { tempat:'alam', info:'melung',imageUrl: "melung1.jpg", content: "Melung Baturaden" },
+    { tempat:'alam', info:'melung',imageUrl: "melung4.jpg", content: "Melung Baturaden" },
+    { tempat:'alam', info:'melung',imageUrl: "melung5.jpg", content: "Melung Baturaden" },
+    { tempat:'alam', info:'melung',imageUrl: "melung2.webp", content: "Melung Baturaden" },
   ],
 //taman
   "botani":[
-    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani1.jpg", content: "Taman Botani Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani3.png", content: "Taman Botani Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani4.jpg", content: "Taman Botani Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani5.jpg", content: "Taman Botani Baturaden" },
-    { imageUrl: "http://localhost/uts/assets/images/taman/botani/botani2.jpg", content: "Taman Botani Baturaden" },
+    { tempat:'taman', info:'botani',imageUrl:"botani1.jpg", content: "Taman Botani Baturaden" },
+    { tempat:'taman', info:'botani', imageUrl: "botani3.png", content: "Taman Botani Baturaden" },
+    { tempat:'taman', info:'botani',imageUrl: "botani4.jpg", content: "Taman Botani Baturaden" },
+    { tempat:'taman', info:'botani',imageUrl: "botani5.jpg", content: "Taman Botani Baturaden" },
+    { tempat:'taman', info:'botani',imageUrl: "botani2.jpg", content: "Taman Botani Baturaden" },
   ]
 }
 // Fungsi untuk menampilkan sub-konten berdasarkan destinasi yang dipilih
@@ -96,12 +87,12 @@ function tampilkanSub(category) {
       var subb = document.createElement('div'); // Buat elemen div untuk setiap kartu
       subb.className = 'swiper-slide'; 
       subb.innerHTML = `
-      <div class="card text-bg-dark" onclick="tampilkanDetail('${element.detail}')">
-        <div class="card-img-overlay">
-          <h5 class="card-title">${element.content}</h5>
-        </div> 
+      <div class="swiper-slide">
+      
+      <img src="./assets/images/${element.tempat}/${element.info}/${element.imageUrl}" alt="${element.content}" />
       </div>
-      <img src="${element.imageUrl}" class="card-img" alt="${element.content}">
+    </div>
+
     `;
     subKonten.appendChild(subb); // Tambahkan kartu ke dalam isi sub-konten
   });

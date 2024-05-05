@@ -109,18 +109,13 @@ color: #83C50C !important;
   text-align: center;
 }
 .title {
-  font-size: 36px;
+  font-size: 20px;
   font-weight: bold;
 }
 .subtitle {
-  font-size: 24px;
+  font-size: 18px;
 }
-.text {
-  font-size: 16px;
-  max-width: 600px;
-  margin-top: 20px;
-  line-height: 1.5;
-}
+
 
 
 .btn {

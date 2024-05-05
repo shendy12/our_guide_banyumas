@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilihan Layout</title>
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-start; 
+  overflow-x: auto; 
+  margin-bottom: 10px;
+}
+
+.option {
+  flex-grow: 1;
+  text-align: center;
+  background-color: lightgray;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.main {
+  overflow-x: auto; 
+  white-space: nowrap; 
+  display: flex;
+}
+
+.card {
+  width: 300px;
+  margin-right: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="options">
+    <div class="option" onclick="showProducts('Baju')">Baju</div>
+    <div class="option" onclick="showProducts('Celana')">Celana</div>
+    <div class="option" onclick="showProducts('Sepatu')">Sepatu</div>
+  </div>
+  <div class="main" id="mainContent">
+    <!-- Data akan ditampilkan di sini -->
+  </div>
+  <img src="./images/alam/caub/" alt="">
+</div>
+<script>
+// Array untuk menyimpan data produk untuk setiap kategori
+const productData = {
+  "Baju": [
+    //untu gihub menggunakan https://username.github.io/repository/images/alam/limpakuwus/limpakuwus.jpg
+
+    { imageUrl: "http://localhost/uts/assets/images/alam/caub/caub.webp", content: "Menara Pandang Caub Baturraden" },
+    // Tambahkan entri lain jika diperlukan
+  ],
+  "Celana": [
+    // Tambahkan entri lain jika diperlukan
+  ],
+  "Sepatu": [
+    // Tambahkan entri lain jika diperlukan
+  ]
+};
+
+function showProducts(category) {
+  var mainContent = document.getElementById("mainContent");
+  mainContent.innerHTML = ""; // Kosongkan konten utama
+  // Tampilkan produk sesuai dengan kategori yang dipilih
+  productData[category].forEach(productInfo => {
+    var card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${productInfo.imageUrl}" alt="Produk">
+      <div class="card-content">${productInfo.content}</div>
+    `;
+    mainContent.appendChild(card);
+  });
+}
+</script>
+</body>
+</html>
