@@ -28,7 +28,7 @@ function tampilkan(category) {
       var kolom = document.createElement('div');
       kolom.className = 'swiper-slide '; // Menambahkan kelas kolom
       kolom.innerHTML = `
-      <div class="swiper-slide">
+      <div class="swiper-slide" id="isikonten">
       <img src="./assets/images/${element.tempat}/${element.info}/${element.imageUrl}" alt="${element.content}" />
       <div class="text-overlay">
           <div class="title">${element.content}</div>
@@ -37,7 +37,7 @@ function tampilkan(category) {
           <a href="#subkonten">
           <button type="button" class="btn btn-secondary btn-sm" onclick="tampilkanSub('${element.info}')">Lihat Lebih Banyak Gambar</button>
           </a>
-        </div>
+          </div>
       </div>
     `;
     
