@@ -34,7 +34,9 @@ function tampilkan(category) {
           <div class="title">${element.content}</div>
           <div class="subtitle">${element.lokasi}</div>
           <a href="./assets/${element.tempat}/${element.info}.html"><button type="button" class="btn btn-secondary btn-sm">Informasi Sengkap</button></a>
+          <a href="#subkonten">
           <button type="button" class="btn btn-secondary btn-sm" onclick="tampilkanSub('${element.info}')">Lihat Lebih Banyak Gambar</button>
+          </a>
         </div>
       </div>
     `;
