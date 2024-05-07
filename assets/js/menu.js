@@ -26,7 +26,7 @@ function tampilkan(category) {
    // Mengosongkan isi kontainer sebelum menambahkan data baru
   destinasi[category].forEach(element => { // Akses array destinasi[category]
       var kolom = document.createElement('div');
-      kolom.className = 'swiper-slide '; // Menambahkan kelas kolom
+      kolom.className = 'swiper-slide '; 
       kolom.innerHTML = `
       <div class="swiper-slide" id="isikonten">
       <img src="./assets/images/${element.tempat}/${element.info}/${element.imageUrl}" alt="${element.content}" />
@@ -41,11 +41,10 @@ function tampilkan(category) {
       </div>
     `;
     
-    isi.appendChild(kolom); // Tambahkan kolom ke dalam kontainer
+    isi.appendChild(kolom); 
     
   });
 }
-// Objek untuk menyimpan data sub-kategori
 const sub_img = {
 //alam
   "limpakuwus": [
@@ -81,12 +80,11 @@ const sub_img = {
   ]
 }
 // Fungsi untuk menampilkan sub-konten berdasarkan destinasi yang dipilih
-// Fungsi untuk menampilkan sub-konten berdasarkan destinasi yang dipilih
 function tampilkanSub(category) {
   var subKonten = document.getElementById('subkonten');
   subKonten.innerHTML = ''; // Mengosongkan isi HTML sebelum menambahkan data baru
   sub_img[category].forEach(element => { // Akses array sub_img[category]
-      var subb = document.createElement('div'); // Buat elemen div untuk setiap kartu
+      var subb = document.createElement('div'); 
       subb.className = 'swiper-slide'; 
       subb.innerHTML = `
       <div class="swiper-slide">
@@ -96,7 +94,6 @@ function tampilkanSub(category) {
     </div>
 
     `;
-    subKonten.appendChild(subb); // Tambahkan kartu ke dalam isi sub-konten
+    subKonten.appendChild(subb);
   });
 }
-

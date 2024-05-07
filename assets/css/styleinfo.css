@@ -6,6 +6,7 @@ body{
     background: rgb(204, 204, 204);
 }
 main{
+  margin-top: 18%;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -15,14 +16,14 @@ main{
 #main.container{
     width: 100%; /* Mengisi lebar layar penuh */
     display: grid;
-    grid-template-columns: 30% 70%; /* Ubah rasio kolom jika perlu */
+    grid-template-columns: 40% 60%; /* Ubah rasio kolom jika perlu */
     grid-template-areas: "cover content";
     box-shadow:-2px 0px 33px 0px rgba(0,0,0,0.75);
 }
 
 .cover{
     grid-area: cover;
-    height: 80vh;
+    height: 90vh;
     background-size: cover;
     background-position: center center;
 }
@@ -101,14 +102,13 @@ main{
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     #main.container {
       grid-template-columns: 100%; /* Menjadikan kolom menjadi satu */
       grid-template-areas: "cover" "content"; /* Menyediakan area untuk cover dan content */
     }
-  
     .content {
-      margin-top: 20px; /* Memberi jarak atas */
+      margin-top: 60px; /* Memberi jarak atas */
     }
   
     .black-label{
@@ -125,11 +125,22 @@ main{
     }
 
     .cover{
-        height: 100vh;
+      min-height: 160vh;
+        max-height: 180vh;
         background-position: center top; 
         background-size: contain; 
     }
+
   }
+
+  @media (max-width: 600px) {
+    /* Saat layar memiliki lebar kurang dari atau sama dengan 600px */
+    #maps iframe {
+        width: 270px;
+        height: 450px; /* Tetapkan tinggi sesuai kebutuhan */
+    }
+}
+
   
  /* navbar*/
  .navbar{
