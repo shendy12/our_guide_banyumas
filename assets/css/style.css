@@ -1,6 +1,6 @@
 .navbar{
   /*warna*/
-  background-color:#D9EEB3;
+  background-color:#b5ed4e;
   /*transparansi*/
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -11,7 +11,15 @@
   font-size: 23px;
 }
 body{
-  background-color: #77797b !important;
+  background-color: #979c9f!important;
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  
+  
 }
 
 /*global*/
@@ -37,7 +45,7 @@ section{
   content: "";
   display: block;
   position: absolute;
-  background-color: rgba(92, 97, 93, 0.565);
+  background-color: rgba(81, 81, 81, 0.466);
   width: 100%;
   height: 100%;
   top: 0;
@@ -63,13 +71,16 @@ border: #dee4e7;
 #menu{
   background-color: #979c9f;
   background-size: cover;
-  height:200%;
+  height:100%;
   position: relative;
   padding: 0;    
 }
 #menu a{
   text-decoration: none;
   color:aliceblue
+}
+#menu .pilihan {
+  border-bottom: 3px solid #c1fdd0; /* Warna dan ketebalan garis dapat disesuaikan sesuai preferensi Anda */
 }
 
 
@@ -134,3 +145,5 @@ color: #83C50C !important;
 .btn:hover {
   background-color: #83C50C !important;
 }
+
+

@@ -29,7 +29,7 @@ function tampilkan(category) {
       kolom.className = 'swiper-slide '; 
       kolom.innerHTML = `
       <div class="swiper-slide" id="isikonten">
-      <img src="./assets/images/${element.tempat}/${element.info}/${element.imageUrl}" alt="${element.content}" />
+      <img src="./assets/images/${element.tempat}/${element.info}/${element.imageUrl}" alt="${element.content}" style="max-width: 100%; height: 100%;"/>
       <div class="text-overlay">
           <div class="title">${element.content}</div>
           <div class="subtitle">${element.lokasi}</div>
@@ -77,7 +77,39 @@ const sub_img = {
     { tempat:'taman', info:'botani',imageUrl: "botani4.jpg", content: "Taman Botani Baturaden" },
     { tempat:'taman', info:'botani',imageUrl: "botani5.jpg", content: "Taman Botani Baturaden" },
     { tempat:'taman', info:'botani',imageUrl: "botani2.jpg", content: "Taman Botani Baturaden" },
-  ]
+  ],
+  'andang':[
+  { tempat:'taman', info:'andang',imageUrl: "an1.jpg" ,  content:"Taman Andang Pangrenan"},
+  { tempat:'taman', info:'andang',imageUrl: "an2.jpg" ,  content:"Taman Andang Pangrenan"},
+  { tempat:'taman', info:'andang',imageUrl: "an3.jpg" ,  content:"Taman Andang Pangrenan"},
+  { tempat:'taman', info:'andang',imageUrl: "an4.jpg" ,  content:"Taman Andang Pangrenan"},
+  { tempat:'taman', info:'andang',imageUrl: "an5.jpg" ,  content:"Taman Andang Pangrenan"},
+  ],
+  'kebunraya':[
+  { tempat:'taman',info:'kebunraya',imageUrl: "kbr1.jpg" ,  content:"Kebunraya" },
+  { tempat:'taman',info:'kebunraya',imageUrl: "kbr2.jpg" ,  content:"Kebunraya" },
+  { tempat:'taman',info:'kebunraya',imageUrl: "kbr3.jpg" ,  content:"Kebunraya" },
+  { tempat:'taman',info:'kebunraya',imageUrl: "kbr4.jpg" ,  content:"Kebunraya" },
+  { tempat:'taman',info:'kebunraya',imageUrl: "kbr5.jpg" ,  content:"Kebunraya" },
+
+],
+
+  'maskemambang' :[
+  { tempat:'taman',info:'maskemambang' ,imageUrl: "ms1.jpg" ,  content:"Maaskemambang" },
+  { tempat:'taman',info:'maskemambang' ,imageUrl: "ms2.jpg" ,  content:"Maaskemambang" },
+  { tempat:'taman',info:'maskemambang' ,imageUrl: "ms3.jpg" ,  content:"Maaskemambang" },
+  { tempat:'taman',info:'maskemambang' ,imageUrl: "ms4.jpg" ,  content:"Maaskemambang" },
+  { tempat:'taman',info:'maskemambang' ,imageUrl: "ms5.jpg" ,  content:"Maaskemambang" },
+
+],
+  'nsw' :[
+    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw1.jpg" ,  content:"New Small Word" },
+    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw2.jpg" ,  content:"New Small Word" },
+    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw3.jpg" ,  content:"New Small Word" },
+    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw4.jpg" ,  content:"New Small Word" },
+    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw5.jpg" ,  content:"New Small Word" },
+
+  ],
 }
 // Fungsi untuk menampilkan sub-konten berdasarkan destinasi yang dipilih
 function tampilkanSub(category) {

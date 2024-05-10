@@ -41,13 +41,13 @@
               Wisata
             </a>
             <ul class="dropdown-menu warna">
-              <li><a class="dropdown-item warna" href="#isi" onclick="tampilkan('alam')">Alam</a></li>
-              <li><a class="dropdown-item warna" href="#isi" onclick="tampilkan('taman')">Taman</a></li>
-              <li><a class="dropdown-item warna" href="#isi" onclick="tampilkan('museum')">Museum</a></li>
+              <li><a class="dropdown-item warna" href="#isikonten" onclick="tampilkan('alam')">Alam</a></li>
+              <li><a class="dropdown-item warna" href="#isikonten" onclick="tampilkan('taman')">Taman</a></li>
+              <li><a class="dropdown-item warna" href="#isikonten" onclick="tampilkan('museum')">Museum</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Peta Wisata</a>
+            <a class="nav-link active" aria-current="page" href="#aboutUs">Tentang Kami</a>
           </li>
         </ul>
       </div>
@@ -64,7 +64,7 @@
         <p class="text-center">Anda ingin berpergian, tetapi tidak punya tujuan? Tenang, Wisata Purwokerto menyediakan berbagai destinasi
           menarik di sekitar Purwokerto untuk Anda.</p>
         <div class="d-grid gap-2 col-6 mt-lg-4 mx-auto">
-          <a href="#menu" class="btn text-white rounded-pill px-4 shadow warna">Jelajahi Sekarang</a>
+          <a href="#menu" class="btn text-white rounded-pill px-4 shadow warna " onclick="tampilkan('alam')"">Jelajahi Sekarang</a>
         </div>
       </div>
     </div>
@@ -76,26 +76,26 @@
       <h3 class="justify-content-center">Yuk pilih destinasi yang kamu sukaa!!!!!</h3>
       </div>
       <div class="container text-center mt-4">
-        <div class="row container text-center mt-4">
+        <div class="row justify-content-center text-center mt-4">
           <!--Alam-->
-          <div class="col">
-            <a href="#isi" class="pilihan" onclick="tampilkan('alam')">
+          <div class="col pilihan">
+            <a href="#isikonten" class="pilihan" onclick="tampilkan('alam')">
               <h2>Alam</h2>
             </a>
           </div>
           <!--Alam-->
 
           <!--Taman-->
-          <div class="col">
-            <a href="#isi" class="pilihan" onclick="tampilkan('taman')">
+          <div class="col pilihan">
+            <a href="#isikonten" class="pilihan" onclick="tampilkan('taman')">
               <h2>Taman</h2>
             </a>
           </div>
           <!--Taman-->
 
           <!--Museum-->
-          <div class="col">
-            <a href="#isi" class="pilihan" onclick="tampilkan('museum')">
+          <div class="col pilihan">
+            <a href="#isikonten" class="pilihan" onclick="tampilkan('museum')">
               <h2>Museum</h2>
             </a>
           </div>
@@ -108,23 +108,20 @@
     <div class="container" id="destinasi-container"></div>
 
     <div class="row">
-      <!-- Kartu Destinasi -->
-      <div class="col" id="isi" style="margin-bottom: 100px;">       </div>
+      <!--jarak-->
+      <div class="col" id="isi" style="margin-bottom: 30px;"></div>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper" id="isikonten">
             <!-- Slide items go here -->
           </div>
-          <!-- Navigation buttons -->
+          <!-- Navigasi-->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
-          <!-- Pagination -->
+          
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
-    <!-- Sub Konten -->
-
-
     </div>
     </div>
     <!-- Sub Konten -->
@@ -133,24 +130,57 @@
 
     <div class="row">
       <div class="col md-top-5" id="subisi style="margin-top: 30px;">
-        <div class="swiper mySwiper2 ms-auto">
+        <div class="swiper is mySwiper2">
           <div class="swiper-wrapper" id="subkonten">
-            <!-- Sub slide items go here -->
+            <!-- Sub slide item-->
           </div>
-          <!-- Sub navigation buttons -->
+          <!-- Sub navigasi-->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
-          <!-- Sub pagination -->
+          <!-- Sub  -->
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
-    <!-- Sub Konten -->
-
     </div>
     </div>
 
   </section>
+<br><br>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center" id="aboutUs">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Tentang Kami</h5>
+          <p>Temukan lebih lanjut tentang kami dan misi kami untuk menyediakan informasi wisata yang terpercaya dan bermanfaat bagi pengunjung.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Hubungi Kami</h5>
+          <p>Jangan ragu untuk menghubungi tim kami untuk pertanyaan, saran, atau kerjasama.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Kebijakan Privasi</h5>
+          <p>Pelajari bagaimana kami melindungi privasi Anda saat menggunakan situs kami.</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <h5>Ketentuan Penggunaan</h5>
+          <p>Bacalah ketentuan penggunaan kami yang mengatur penggunaan situs dan konten yang disediakan.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Ikuti Kami</h5>
+          <p>Tetap terhubung dengan kami melalui media sosial untuk mendapatkan pembaruan terbaru tentang destinasi wisata dan tips perjalanan.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>© 2024 Wisata Purwokerto</h5>
+          <p>Hak Cipta Dilindungi. Semua hak dilindungi undang-undang.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of Footer -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -160,41 +190,41 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-var swiper1 = new Swiper(".mySwiper", {
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-    },
-  },
-});
+    var swiper1 = new Swiper(".mySwiper", {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
+    });
 
-var swiper2 = new Swiper(".mySwiper2", {
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-    },
-  },
-});
+    var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+      },
+    });
   </script>
 
 </body>

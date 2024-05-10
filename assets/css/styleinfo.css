@@ -108,7 +108,7 @@ main{
       grid-template-areas: "cover" "content"; /* Menyediakan area untuk cover dan content */
     }
     .content {
-      margin-top: 60px; /* Memberi jarak atas */
+      margin-top: 30px; /* Memberi jarak atas */
     }
   
     .black-label{
@@ -125,18 +125,28 @@ main{
     }
 
     .cover{
-      min-height: 160vh;
-        max-height: 180vh;
+      margin-top: 20px;
+  
+        max-height: 30vh;
         background-position: center top; 
         background-size: contain; 
     }
+    main{
+  margin-top: 18%;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
 
   }
 
   @media (max-width: 600px) {
     /* Saat layar memiliki lebar kurang dari atau sama dengan 600px */
     #maps iframe {
-        width: 270px;
+        width: 275px;
         height: 450px; /* Tetapkan tinggi sesuai kebutuhan */
     }
 }
@@ -145,7 +155,7 @@ main{
  /* navbar*/
  .navbar{
     /*warna*/
-    background-color:#D9EEB3;
+    background-color:#b5ed4e;
     /*transparansi*/
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
