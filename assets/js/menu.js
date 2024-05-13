@@ -3,18 +3,25 @@ const destinasi ={
   "alam" : [
       { tempat:'alam', info:'limpakuwus',imageUrl: "limpakuwus.jpg", content: "Limpakuwus", info:'limpakuwus',lokasi:'Baturaden'},
       { tempat:'alam', info:'caub',imageUrl: "caub.webp" ,  content:"Menara Pandang Caub",lokasi:'Baturaden' },
-      { tempat:'alam', info:'melung',imageUrl: "melung1.jpg" ,  content:"Melung", lokasi:'Baturaden' }
-  ],
+      { tempat:'alam', info:'melung',imageUrl: "melung1.jpg" ,  content:"Melung", lokasi:'Baturaden' },
+      { tempat:'alam', info:'gomblang',imageUrl: "c.jpg" ,  content:"Curug Gomblang", lokasi:'Baturaden' }
+
+  
+    ],
   "taman" : [
     { tempat:'taman', info:'botani',imageUrl: "botani2.jpg" ,  content:"Taman Botani",lokasi:'Baturaden'},
     { tempat:'taman', info:'andang',imageUrl: "an1.jpg" ,  content:"Taman Andang Pangrenan",lokasi:'Purwokero'},
-    { tempat:'taman',info:'kebunraya',imageUrl: "kbr1.jpg" ,  content:"Kebunraya",lokasi:'Baturaden',tempat:'taman' },
+    { tempat:'taman',info:'kebunraya',imageUrl: "kbr1.jpg" ,  content:"Kebunraya",lokasi:'Baturaden'},
     { tempat:'taman',info:'maskemambang' ,imageUrl: "ms1.jpg" ,  content:"Maaskemambang",lokasi:'Purwokerto' },
     { tempat:'taman', info:'nsw' ,  imageUrl: "nsw1.jpg" ,  content:"New Small Word",lokasi:'Purwokero' },
 
     
   ],
-  "museum" : []
+  "museum" : [
+    {tempat:'museum',info:'js',imageUrl: "js2.jpg", content:'Museum Panglima Besar TNI Jenderal Sudirman' , lokasi:'Purwokerto'},
+    {tempat:'museum',info:'bri',imageUrl: "bri1.jpg", content:'Museum Bank Rakyat Indonesia', lokasi:'Purwokerto'},
+
+  ]
 }
 
 // Fungsi untuk menampilkan destinasi berdasarkan kategori
@@ -33,9 +40,9 @@ function tampilkan(category) {
       <div class="text-overlay">
           <div class="title">${element.content}</div>
           <div class="subtitle">${element.lokasi}</div>
-          <a href="./assets/${element.tempat}/${element.info}.html"><button type="button" class="btn btn-secondary btn-sm">Informasi Sengkap</button></a>
+          <a href="./assets/${element.tempat}/${element.info}.html"><button type="button" class="btn btn-secondary btn-sm">Informasi Lengkap</button></a>
           <a href="#subkonten">
-          <button type="button" class="btn btn-secondary btn-sm" onclick="tampilkanSub('${element.info}')">Lihat Lebih Banyak Gambar</button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="tampilkanSub('${element.info}')">Gambar - gambar di destinasi</button>
           </a>
           </div>
       </div>
@@ -69,6 +76,16 @@ const sub_img = {
     { tempat:'alam', info:'melung',imageUrl: "melung4.jpg", content: "Melung Baturaden" },
     { tempat:'alam', info:'melung',imageUrl: "melung5.jpg", content: "Melung Baturaden" },
     { tempat:'alam', info:'melung',imageUrl: "melung2.webp", content: "Melung Baturaden" },
+  ],
+
+
+  "gomblang" : [
+    { tempat:'alam', info:'gomblang',imageUrl: "c.jpg" ,  content:"Curug Gomblang", lokasi:'Baturaden' },
+    { tempat:'alam', info:'gomblang',imageUrl: "c1.jpg" ,  content:"Curug Gomblang", lokasi:'Baturaden' },
+    { tempat:'alam', info:'gomblang',imageUrl: "c2.jpg" ,  content:"Curug Gomblang", lokasi:'Baturaden' },
+    { tempat:'alam', info:'gomblang',imageUrl: "c3.jpg" ,  content:"Curug Gomblang", lokasi:'Baturaden' },
+    { tempat:'alam', info:'gomblang',imageUrl: "c4.jpg" ,  content:"Curug Gomblang", lokasi:'Baturaden' }
+
   ],
 //taman
   "botani":[
@@ -107,9 +124,28 @@ const sub_img = {
     { tempat:'taman', info:'nsw' ,  imageUrl: "nsw2.jpg" ,  content:"New Small Word" },
     { tempat:'taman', info:'nsw' ,  imageUrl: "nsw3.jpg" ,  content:"New Small Word" },
     { tempat:'taman', info:'nsw' ,  imageUrl: "nsw4.jpg" ,  content:"New Small Word" },
-    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw5.jpg" ,  content:"New Small Word" },
+    { tempat:'taman', info:'nsw' ,  imageUrl: "nsw5.png" ,  content:"New Small Word" },
 
   ],
+
+  //museum
+
+  'js' : [
+    {tempat:'museum',info:'js',imageUrl: "js2.jpg", content:'Museum Panglima Besar TNI Jenderal Sudirman'},
+    {tempat:'museum',info:'js',imageUrl: "js1.jpg", content:'Museum Panglima Besar TNI Jenderal Sudirman'},
+    {tempat:'museum',info:'js',imageUrl: "js3.jpg", content:'Museum Panglima Besar TNI Jenderal Sudirman'},
+    {tempat:'museum',info:'js',imageUrl: "js4.jpg", content:'Museum Panglima Besar TNI Jenderal Sudirman'},
+
+  ],
+  'bri' :[
+    {tempat:'museum',info:'bri',imageUrl: "bri.jpg", content:'Museum Bank Rakyat Indonesia'},
+    {tempat:'museum',info:'bri',imageUrl: "bri1.jpg", content:'Museum Bank Rakyat Indonesia'},
+    {tempat:'museum',info:'bri',imageUrl: "bri2.jpg", content:'Museum Bank Rakyat Indonesia'},
+    {tempat:'museum',info:'bri',imageUrl: "bri3.jpg", content:'Museum Bank Rakyat Indonesia'},
+    {tempat:'museum',info:'bri',imageUrl: "bri4.jpg", content:'Museum Bank Rakyat Indonesia'},
+
+  ]
+
 }
 // Fungsi untuk menampilkan sub-konten berdasarkan destinasi yang dipilih
 function tampilkanSub(category) {
@@ -129,3 +165,9 @@ function tampilkanSub(category) {
     subKonten.appendChild(subb);
   });
 }
+
+//agar akan langsung tamppil gambar di halaman isi maka saya mengakalinya dengan triger dimana itu akan meng click bagian yg ada onclick yg saya sisipkan di dokumen //
+function triggerClick() {
+  document.querySelector("#triger").click();
+}
+

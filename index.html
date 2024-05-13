@@ -10,9 +10,10 @@
   <!--Link ke local css-->
   <link href="./assets/css/style.css" rel="stylesheet">
   <!--Link ke bootstrap css-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+   rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
@@ -20,34 +21,44 @@
   <!--navbar-->
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/images/icon1.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+      <a class="navbar-brand" href="#" onclick="tampilkan('taman')" id="triger"''>
+        <img src="./assets/images/icon1.png" alt="Logo" 
+        width="30" height="30" class="d-inline-block align-text-top">
         Wisata Purwokerto
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false"
+         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page"
+             href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#menu">Destinasi</a>
+            <a class="nav-link active" aria-current="page" 
+            href="#menu">Destinasi</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" 
+            data-bs-toggle="dropdown" aria-expanded="false">
               Wisata
             </a>
             <ul class="dropdown-menu warna">
-              <li><a class="dropdown-item warna" href="#isikonten" onclick="tampilkan('alam')">Alam</a></li>
-              <li><a class="dropdown-item warna" href="#isikonten" onclick="tampilkan('taman')">Taman</a></li>
-              <li><a class="dropdown-item warna" href="#isikonten" onclick="tampilkan('museum')">Museum</a></li>
+              <li><a class="dropdown-item warna" href="#isikonten" 
+                onclick="tampilkan('alam')">Alam</a></li>
+              <li><a class="dropdown-item warna" href="#isikonten"
+                 onclick="tampilkan('taman')">Taman</a></li>
+              <li><a class="dropdown-item warna" href="#isikonten" 
+                onclick="tampilkan('museum')">Museum</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#aboutUs">Tentang Kami</a>
+            <a class="nav-link active" aria-current="page" 
+            href="#aboutUs">Tentang Kami</a>
           </li>
         </ul>
       </div>
@@ -70,16 +81,18 @@
     </div>
   </section>
 
-  <section id="menu">
+  <section id="menu" style="  margin-left: 6%; margin-right: 6%;">
     <div class="container">
       <div class="text-center text-light">
-      <h3 class="justify-content-center">Yuk pilih destinasi yang kamu sukaa!!!!!</h3>
+      <h3 class="justify-content-center">
+      Yuk pilih destinasi yang kamu sukaa!!!!!</h3>
       </div>
       <div class="container text-center mt-4">
         <div class="row justify-content-center text-center mt-4">
           <!--Alam-->
           <div class="col pilihan">
-            <a href="#isikonten" class="pilihan" onclick="tampilkan('alam')">
+            <a href="#isikonten" class="pilihan" id="alm"
+             onclick="tampilkan('alam')">
               <h2>Alam</h2>
             </a>
           </div>
@@ -87,7 +100,8 @@
 
           <!--Taman-->
           <div class="col pilihan">
-            <a href="#isikonten" class="pilihan" onclick="tampilkan('taman')">
+            <a href="#isikonten" class="pilihan" id="tmn"
+            onclick="tampilkan('taman')">
               <h2>Taman</h2>
             </a>
           </div>
@@ -95,7 +109,8 @@
 
           <!--Museum-->
           <div class="col pilihan">
-            <a href="#isikonten" class="pilihan" onclick="tampilkan('museum')">
+            <a href="#isikonten" class="pilihan" id="ms"
+             onclick="tampilkan('museum')">
               <h2>Museum</h2>
             </a>
           </div>
@@ -125,11 +140,9 @@
     </div>
     </div>
     <!-- Sub Konten -->
-    <div class="col-12 col-md-4 mt-lg-5" id="wrep colom2"></div>
-    <div class="container" id="destinasi-container"></div>
-
+<br><br>
     <div class="row">
-      <div class="col md-top-5" id="subisi style="margin-top: 30px;">
+      <div class="col md-top-5" id="subisi">
         <div class="swiper is mySwiper2">
           <div class="swiper-wrapper" id="subkonten">
             <!-- Sub slide item-->
@@ -147,40 +160,75 @@
 
   </section>
 <br><br>
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center" id="aboutUs">
-    <div class="container py-4">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Tentang Kami</h5>
-          <p>Temukan lebih lanjut tentang kami dan misi kami untuk menyediakan informasi wisata yang terpercaya dan bermanfaat bagi pengunjung.</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Hubungi Kami</h5>
-          <p>Jangan ragu untuk menghubungi tim kami untuk pertanyaan, saran, atau kerjasama.</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Kebijakan Privasi</h5>
-          <p>Pelajari bagaimana kami melindungi privasi Anda saat menggunakan situs kami.</p>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center" id="aboutUs">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col">
+        <h4>Hubungi Kami</h4>
+        <p>Jangan ragu untuk menghubungi tim kami untuk pertanyaan, saran, atau kerjasama.</p>
+        <div class="contact-icons">
+          <a href="https://wa.me/6285747863723?text=Halo%20Tim%20Wisata%20Purwokerto,%20Saya%20ingin%20bertanya%20tentang%20destinasi%20wisata." target="_blank">
+            <div>
+              <img src="./assets/images/whatsapp.png" alt="WhatsApp" width="30" height="30">
+              <span>+62-857-4786-3723</span>
+            </div>
+          </a>
+          <a href="mailto:info@wisatapurwokerto.com?subject=Pertanyaan%20Tentang%20Destinasi%20Wisata&body=Halo%20Tim%20Wisata%20Purwokerto,%0A%0ASaya%20ingin%20bertanya%20tentang%20destinasi%20wisata." target="_blank">
+            <div>
+              <img src="./assets/images/gmail.png" alt="Email" width="30" height="30">
+              <span>wisatapurwokerto@gmail.com</span>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-md-4">
-          <h5>Ketentuan Penggunaan</h5>
-          <p>Bacalah ketentuan penggunaan kami yang mengatur penggunaan situs dan konten yang disediakan.</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Ikuti Kami</h5>
-          <p>Tetap terhubung dengan kami melalui media sosial untuk mendapatkan pembaruan terbaru tentang destinasi wisata dan tips perjalanan.</p>
-        </div>
-        <div class="col-md-4">
-          <h5>© 2024 Wisata Purwokerto</h5>
-          <p>Hak Cipta Dilindungi. Semua hak dilindungi undang-undang.</p>
+      <div class="col-12 col-md">
+        <h4>Tentang Kami</h4>
+        <p>Wisata Purwokerto adalah penyedia informasi terpercaya tentang destinasi wisata di sekitar Purwokerto. Kami berkomitmen untuk memberikan pengalaman terbaik bagi pengunjung dengan menyediakan panduan lengkap tentang tempat-tempat wisata yang menarik. Tim kami terdiri dari para ahli lokal yang berdedikasi untuk memastikan Anda mendapatkan informasi yang akurat dan bermanfaat. Bersama-sama, kami bertujuan untuk memperkenalkan keindahan dan kekayaan budaya Purwokerto kepada dunia.</p>
+      </div>
+      <div class="col">
+        <h4>Media Sosial</h4>
+        <p>Ikuti kami di media sosial untuk mendapatkan pembaruan terbaru tentang destinasi wisata dan tips perjalanan.</p>
+        <div class="social-icons">
+          <a href="https://twitter.com/WisataPurwokerto" target="_blank">
+            <div>
+              <img src="./assets/images/twitter.png" alt="Twitter" width="30" height="30">
+              <span>WisataPurwokerto</span>
+            </div>
+          </a>
+          <a href="https://www.facebook.com/WisataPurwokerto" target="_blank">
+            <div>
+              <img src="./assets/images/facebook.png" alt="Facebook" width="30" height="30">
+              <span>WisataPurwokerto</span>
+            </div>
+          </a>
+          <a href="https://instagram.com/WisataPurwokerto" target="_blank">
+            <div>
+              <img src="./assets/images/instagram.png" alt="Instagram" width="30" height="30">
+              <span>@WisataPurwokerto</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- End of Footer -->
+    <div class="row mt-3">
+      <div class="col">
+        <img src="./assets/images/icon1.png" alt="Logo" width="50" height="50">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <p>© 2024 Wisata Purwokerto. Hak Cipta Dilindungi. Semua hak dilindungi undang-undang.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- End Footer -->
+
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -227,6 +275,10 @@
     });
   </script>
 
+<script>triggerClick('alm'); // Ini akan mengklik elemen dengan ID "alm"
+  triggerClick('tmn'); // Ini akan mengklik elemen dengan ID "tmn"
+  triggerClick('ms');  // Ini akan mengklik elemen dengan ID "ms"
+  </script>
 </body>
 
 </html>
